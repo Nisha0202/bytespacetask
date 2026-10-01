@@ -9,8 +9,8 @@ import { courses } from "@/lib/data";
 
 export default function AuthLayout({ title, text, children }: { title: string; text: string; children: ReactNode }) {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-grid">
-      <div className="mx-auto grid min-h-screen max-w-[1400px] gap-10 px-5 py-8 lg:grid-cols-2 lg:px-12 lg:py-12">
+    <main className="relative min-h-screen overflow-hidden bg-grid ">
+      <div className="mx-auto grid min-h-screen max-w-7xl gap-10 px-5 py-8 lg:grid-cols-2 lg:px-12 lg:py-12">
         <div className="relative flex flex-col">
           <Logo markOnly />
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mt-8 max-w-lg lg:mt-14">

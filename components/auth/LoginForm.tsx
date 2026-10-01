@@ -18,7 +18,7 @@ export default function LoginForm() {
       <form onSubmit={submit} noValidate className="mt-10 space-y-6">
         <Field id="email" type="email" label="Email" placeholder="designer@example.com" autoComplete="email" value={values.email} onChange={set("email")} error={errors.email} />
         <Field id="password" type="password" label="Password" placeholder="********" autoComplete="current-password" value={values.password} onChange={set("password")} error={errors.password} />
-        <div className="flex justify-end"><Button type="submit" disabled={loading}>{loading ? "Signing in…" : "Sign In"}</Button></div>
+        <div className="flex justify-end"><Button className="w-full lg:w-auto" type="submit" disabled={loading}>{loading ? "Signing in…" : "Sign In"}</Button></div>
         <AnimatePresence>
           {done && <motion.p initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} role="status" className="rounded-2xl bg-lime/30 px-4 py-3 text-sm">Signed in (demo). Connect your backend in <code>useAuthForm.ts</code>.</motion.p>}
         </AnimatePresence>
@@ -29,7 +29,7 @@ export default function LoginForm() {
           <motion.button key={l as string} type="button" aria-label={l as string} whileHover={{ y: -3 }} whileTap={{ scale: 0.94 }} className="flex h-14 w-14 items-center justify-center rounded-2xl border border-slate-300 hover:border-brand">{icon}</motion.button>
         ))}
       </div>
-      <p className="mt-8 text-center text-slate-600">New user? <Link href="/register" className="text-brand hover:underline">Create an account</Link></p>
+      <p className="mt-8 text-center text-slate-600">New user?<Link href="/register" className="text-brand hover:underline"> Create an account</Link></p>
     </AuthLayout>
   );
 }
