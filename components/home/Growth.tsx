@@ -38,14 +38,21 @@ export default function Growth() {
               ))}
             </dl>
           </Reveal>
-          <Reveal x={40} y={0} className="relative mx-auto h-[360px] w-full max-w-md sm:h-[420px]">
-            <CourseCard course={courses[0]} compact className="absolute left-0 top-0 w-60 sm:w-72" />
-            <Learner className="absolute bottom-0 right-0 h-[85%]" />
-            <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 5, repeat: Infinity }} className="absolute right-0 top-6 rounded-2xl bg-white p-4 shadow-card">
+          {/* 1. Make sure overflow is visible on the container so the shadow can bleed out */}
+          <Reveal x={40} y={0} className="relative mx-auto h-[360px] w-full max-w-md sm:h-[420px] overflow-visible">
+            <CourseCard course={courses[5]} compact className="absolute left-0 top-0 w-60 sm:w-60 z-0" />
+
+            {/* 2. Use a directional drop-shadow that casts backward/leftward behind the image */}
+            <Learner className="absolute bottom-0 right-22 h-[90%] z-10 drop-shadow-[-15px_10px_25px_rgba(0,0,0,0.75)]" />
+
+            <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 5, repeat: Infinity }} className="w-40 absolute right-5 top-44 rounded-2xl bg-white p-4 shadow-card z-10">
               <p className="text-xs text-slate-500">Learning Progress</p>
-              <p className="font-heading text-2xl font-semibold">55%</p>
+              <p className="font-heading text-3xl font-semibold">55%</p>
+              <div className="mt-2 h-2 rounded-full bg-slate-200"><motion.div initial={{ width: 0 }} animate={{ width: "55%" }} transition={{ delay: 1.2, duration: 1.2 }} className="h-full rounded-full bg-lime" /></div>
+  
+           
             </motion.div>
-            <Squiggle className="absolute -right-6 top-0 h-20 w-14" />
+            <Squiggle className="absolute -right-2 top-36 h-20 w-14 z-20" />
           </Reveal>
         </div>
 
