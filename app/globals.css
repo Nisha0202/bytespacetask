@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-white font-sans text-ink antialiased; }
+  h1, h2, h3, h4 { @apply font-heading; }
+  :focus-visible { outline: 2px solid #D2F81C; outline-offset: 3px; }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-color: #0038E0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.13) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.13) 1px, transparent 1px);
+    background-size: 90px 90px;
+  }
+  .bg-soft-glow {
+    background:
+      radial-gradient(60% 50% at 8% 15%, rgba(210,248,28,0.35), transparent 70%),
+      radial-gradient(50% 50% at 95% 85%, rgba(0,56,224,0.18), transparent 70%),
+      #F8F9FB;
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+}
