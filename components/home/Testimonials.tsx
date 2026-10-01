@@ -2,6 +2,7 @@
 import { motion } from "motion/react";
 import { testimonials } from "@/lib/data";
 import Reveal from "../ui/Reveal";
+import Image from "next/image";
 
 export default function Testimonials() {
   return (
@@ -15,10 +16,21 @@ export default function Testimonials() {
           {testimonials.map((t, i) => (
             <Reveal key={t.name} delay={i * 0.1}>
               <motion.figure whileHover={{ y: -6 }} className="h-full rounded-3xl border border-slate-200 bg-white p-6 shadow-card">
-                <div className={`h-12 w-12 rounded-full bg-gradient-to-br ${t.hue}`} />
-                <figcaption className="mt-4"><p className="font-heading font-semibold">{t.name}</p><p className="text-sm text-brand">{t.role}</p></figcaption>
-                <blockquote className="mt-4 text-sm leading-relaxed text-slate-500">“{t.quote}”</blockquote>
-              </motion.figure>
+  <figcaption className="flex items-center gap-4">
+    <Image
+      src={t.avatar}
+      alt={t.name}
+      width={56}
+      height={56}
+      className="h-14 w-14 rounded-full object-cover ring-2 ring-lime"
+    />
+    <div>
+      <p className="font-heading font-semibold">{t.name}</p>
+      <p className="text-sm text-brand">{t.role}</p>
+    </div>
+  </figcaption>
+  <blockquote className="mt-4 text-sm leading-relaxed text-slate-500">“{t.quote}”</blockquote>
+</motion.figure>
             </Reveal>
           ))}
         </div>

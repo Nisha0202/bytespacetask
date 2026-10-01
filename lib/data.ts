@@ -32,9 +32,9 @@ export const categories = [
 export const paths = ["Design", "Development", "IT & Software", "Business", "Marketing", "Photography"] as const;
 
 export const testimonials = [
-  { name: "Sarah M.", role: "Enthusiastic Learner", hue: "from-amber-300 to-orange-400", quote: "ByteSpace has transformed my approach to learning. The diverse range of courses and the quality of content provided by creators have exceeded my expectations. The platform truly fosters a sense of community and lifelong learning." },
-  { name: "James L.", role: "Lifelong Learner", hue: "from-sky-300 to-blue-500", quote: "I've tried several online learning platforms, and ByteSpace stands out for its vibrant community and the variety of courses available. The easy navigation and engaging content make it a go-to platform for continuous skill development." },
-  { name: "Alex B.", role: "Inspired Creator", hue: "from-emerald-300 to-teal-500", quote: "As a creator, ByteSpace has been a game-changer for me. The Course Editor is user-friendly, and the support from the community is incredible. It's fulfilling to see my courses making a positive impact on learners globally." },
+  { name: "Sarah M.", role: "Enthusiastic Learner", avatar: "https://i.pravatar.cc/120?img=47", quote: "ByteSpace has transformed my approach to learning. The diverse range of courses and the quality of content provided by creators have exceeded my expectations. The platform truly fosters a sense of community and lifelong learning." },
+  { name: "James L.", role: "Lifelong Learner", avatar: "https://i.pravatar.cc/120?img=33", quote: "I've tried several online learning platforms, and ByteSpace stands out for its vibrant community and the variety of courses available. The easy navigation and engaging content make it a go-to platform for continuous skill development." },
+  { name: "Alex B.", role: "Inspired Creator", avatar: "https://i.pravatar.cc/120?img=12", quote: "As a creator, ByteSpace has been a game-changer for me. The Course Editor is user-friendly, and the support from the community is incredible. It's fulfilling to see my courses making a positive impact on learners globally." },
 ];
 
 export const footerColumns = [
