@@ -28,10 +28,29 @@ export function Triangle({ className = "", delay = 0, tone = "lime" }: P & { ton
 }
 
 export function Squiggle({ className = "", delay = 0, tone = "lime" }: P & { tone?: "lime" | "white" }) {
-  const stroke = tone === "lime" ? "#D2F81C" : "#FFFFFF";
+  const strokeColor = tone === "lime" ? "#D2F81C" : "#FFFFFF";
+
   return (
-    <motion.svg aria-hidden viewBox="0 0 80 110" className={`pointer-events-none ${className}`} fill="none" {...float(delay, 8, 4.5)}>
-      <path d="M12 14c20-8 40-4 52 4M68 40C46 34 24 40 12 52M12 76c22-10 44-8 56 2M16 100c18-6 34-2 46 6" stroke={stroke} strokeWidth="14" strokeLinecap="round" />
+    <motion.svg
+      aria-hidden
+      viewBox="0 0 160 260"
+      className={`pointer-events-none overflow-visible ${className}`}
+      fill="none"
+      {...float(delay, 8, 4.5)}
+    >
+      <path
+        d="M 32 30
+           C 110 10, 140 40, 126 66
+           C 110 92, 42 78, 32 104
+           C 20 132, 138 116, 128 144
+           C 116 172, 42 158, 32 184
+           C 20 212, 136 196, 126 224
+           C 118 244, 88 252, 54 246"
+        stroke={strokeColor}
+        strokeWidth="28"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </motion.svg>
   );
 }
