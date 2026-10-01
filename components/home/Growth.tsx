@@ -47,7 +47,7 @@ export default function Growth() {
 
             <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 5, repeat: Infinity }} className="w-40 sm:w-44 absolute right-3 top-52 sm:top-48 rounded-2xl bg-white p-4 shadow-card z-10">
               <p className="text-xs text-slate-500">Learning Progress</p>
-              <p className="font-heading text-3xl font-semibold">55%</p>
+              <p className="font-heading text-xl md:text-3xl font-semibold">55%</p>
               <div className="mt-2 h-2 rounded-full bg-slate-200"><motion.div initial={{ width: 0 }} animate={{ width: "55%" }} transition={{ delay: 1.2, duration: 1.2 }} className="h-full rounded-full bg-lime" /></div>
 
 
@@ -59,7 +59,7 @@ export default function Growth() {
         <div id="creators" className="grid scroll-mt-24 items-center gap-12 lg:grid-cols-2">
 
           <Reveal x={-40} y={0} className="relative lg:mt-6 mx-auto h-[440px] w-full max-w-md">
-            {/* First card: positioned at top-2 */}
+            {/* First card: */}
             <div className="w-60 absolute left-0 top-0 z-10 rounded-2xl bg-brand p-4 text-white shadow-card">
               <p className="text-xs text-white/70">Total Revenue</p>
               <p className="text-xs text-white/50">July 1-28</p>
@@ -74,7 +74,7 @@ export default function Growth() {
               </div>
             </div>
 
-            {/* Second card: pushed down to top-40 to create space between cards */}
+            {/* Second card */}
             <div className="absolute left-0 top-40 z-10 w-36 rounded-2xl bg-brand p-4 text-white shadow-card">
               <p className="text-xs text-white/70">Year to Date</p>
               <p className="mt-1 font-heading text-xl font-semibold">$1,200.38</p>
@@ -93,7 +93,7 @@ export default function Growth() {
             <div className="absolute bottom-6 right-0 z-20 w-52 [mask-image:linear-gradient(to_right,black_80%,transparent_100%)]">
               <HappyStudents className="w-full" />
             </div>
-            <Squiggle className="absolute right-20  top-48 sm:top-6 h-20 w-14 z-20" />
+            <Squiggle className="absolute right-4 top-64 sm:top-6 h-20 w-16 z-20" />
           </Reveal>
 
           <Reveal className="lg:pb-6">

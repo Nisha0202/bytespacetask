@@ -27,7 +27,12 @@ export function Triangle({ className = "", delay = 0, tone = "lime" }: P & { ton
   );
 }
 
-export function Squiggle({ className = "", delay = 0, tone = "lime" }: P & { tone?: "lime" | "white" }) {
+export function Squiggle({
+  className = "",
+  delay = 0,
+  tone = "lime",
+  rotate = 0,
+}: P & { tone?: "lime" | "white"; rotate?: number }) {
   const strokeColor = tone === "lime" ? "#D2F81C" : "#FFFFFF";
 
   return (
@@ -36,6 +41,7 @@ export function Squiggle({ className = "", delay = 0, tone = "lime" }: P & { ton
       viewBox="0 0 160 260"
       className={`pointer-events-none overflow-visible ${className}`}
       fill="none"
+      style={{ rotate }}
       {...float(delay, 8, 4.5)}
     >
       <path
