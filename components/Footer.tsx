@@ -25,7 +25,7 @@ export default function Footer() {
             <form onSubmit={onSubmit} className="mt-8 flex max-w-lg flex-col gap-3 sm:flex-row" noValidate>
               <label htmlFor="newsletter" className="sr-only">Email</label>
               <input id="newsletter" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email"
-                className="h-14 flex-1 rounded-full border border-slate-300 px-6 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/20" />
+                className="p-4 h-14 flex-1 rounded-full border border-slate-300 px-6 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/20" />
               <Button type="submit">Subscribe</Button>
             </form>
             <p role="status" className="mt-3 min-h-5 text-sm text-brand">{msg}</p>
