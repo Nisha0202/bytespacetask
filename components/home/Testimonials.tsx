@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Testimonials() {
   return (
-    <section className="bg-gradient-to-br from-white via-white to-lime/25 py-16 lg:py-24">
+    <section className="bg-gradient-to-br from-lime/35 via-white to-lime/25 py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-5 lg:px-10">
         <div className="grid items-end gap-6 lg:grid-cols-2 lg:gap-16">
           <Reveal><h2 className="text-3xl font-semibold leading-tight sm:text-4xl">Discover What Our Community Is Saying</h2></Reveal>
